@@ -9,27 +9,27 @@ export const iText = {
 }
 
 export const iFont = {
-  XS: font / 3,
-  SM: font / 2,
-  AS: font,
-  MD: font * 1.5,
-  LG: font * 2,
-  XL: font * 3,
-  XXL: font * 4,
-  XXXL: font * 5,
-  XXXXL: font * 7
+  XS: font / 3, //5.3
+  SM: font / 2, //8
+  AS: font, //16
+  MD: font * 1.5, //24
+  LG: font * 2, //32
+  XL: font * 3, //48
+  XXL: font * 4, // 64
+  XXXL: font * 5, // 80
+  XXXXL: font * 7 // 112
 }
 
 export const iSpace = {
-  SS: space / 4,
-  XS: space / 3,
-  SM: space / 2,
-  AS: space,
-  MD: space * 1.5,
-  LG: space * 2,
-  XL: space * 3,
-  XXL: space * 5,
-  XXXL: space * 7
+  SS: space / 4, //3
+  XS: space / 3, //4
+  SM: space / 2, //6
+  AS: space, //12
+  MD: space * 1.5, //18
+  LG: space * 2, //24
+  XL: space * 3, //36
+  XXL: space * 5, //60
+  XXXL: space * 7 //84
 }
 
 export const iScreen = {
