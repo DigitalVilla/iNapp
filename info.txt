@@ -1,0 +1,40 @@
+////iOS - add alias to .bash_profiles
+alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
+
+///Android
+//List all available emulators
+  ~/Library/Android/sdk/tools/emulator -list-avds
+//Then run one emulator in the list
+  ~/Library/Android/sdk/tools/emulator -avd Nexus_5X_API_27
+
+# Alias Definitions
+alias mphp="/Applications/MAMP/bin/php/php7.1.26/bin/php"
+# Android SDK
+export ANDROID_SDK=/Users/villa/Library/Android/sdk
+# Android platform tools
+export PATH=/Users/villa/Library/Android/sdk/platform-tools:$PATH
+
+# iOS simulator
+alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
+# Android sim list
+alias sdkls="~/Library/Android/sdk/tools/emulator -list-avds"
+# Android simulator
+alias sdk="~/Library/Android/sdk/tools/emulator -avd "
+
+    //https://facebook.github.io/react-native/docs/flexbox
+      // flexDirection: row (default), column
+      //align on primary axis
+      // justifyContent: flex-start, center, flex-end, space-around, space-between and space-evenly.
+      //align on secondary axis
+      // alignItems: flex-start, center, flex-end, and stretch.
+      //note For stretch to have an effect, children must not have a fixed dimension along the secondary axis. In the following example, setting alignItems: stretch does nothing until the width: 50 is removed from the children.
+
+import { Dimensions } from 'react-native';
+Here are the methods that the Dimensions API provides:
+
+Dimensions.get('window').height;
+Dimensions.get('window').width;
+Dimensions.get('screen').height;
+Dimensions.get('screen').width;
+
+page 80 RNACtion

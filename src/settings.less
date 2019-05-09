@@ -1,0 +1,510 @@
+//
+// (C) Copyright 2017 by Mobility Quotient Solutions, Inc.
+//
+// $File: settings.less
+// $Purpose: Styles for colours, fonts, bootstrap overrides
+//
+
+// CDN
+@url-cdn:        'https://winsight-cdn.s3.us-east-2.amazonaws.com/platform';
+@url-cdn-theme:  'https://winsight-cdn.s3.us-east-2.amazonaws.com/platform/files/sites/media/corporate';
+@url-cdn-common: 'https://winsight-cdn.s3.us-east-2.amazonaws.com/platform/files/common';
+
+// Fonts
+@font-accent:    'Montserrat', Helvetica, Arial, sans-serif;
+// @font-secondary: 'Encode Sans', Helvetica, Arial, sans-serif;
+@font-secondary: @font-accent;
+@font-primary:   'Noto Serif', 'Times New Roman', serif;
+
+// Spacing
+@space:                 12px;
+@space-xs:              @space/4;
+@space-sm:              @space/2;
+@space-md:              @space*1.5;
+@space-lg:              @space*2;
+@space-xl:              @space*3;
+@space-xxl:             @space*5;
+@space-xxxl:            @space*7;
+
+// Colours
+@green-light:			#69bd45;
+@green-dark:			#256d5a;
+@teal:					#71ced6;
+@red:					#ff3e58;
+@blue:					#d04d0e;
+@blue-dark:             #0074be;
+@blue-light:            #c8f0ff;
+@yellow:				#ffae00;
+@pink:					#b61e82;
+@purple:				#4b0049;
+@brown:					#7b553c;
+@orange:				#f06421;
+@orange-dark:			darken( @orange, 10% );
+
+@border-item:           @grey-lighter;
+@border-image:          @border-item;
+
+// Greyscale
+@white:                 #ffffff;
+@off-white:             #f2f2f2;
+@grey-lighter:          #e0e0e0;
+@grey-light:            #dfdfdf;
+@grey:                  #cbcbcb;
+@grey-medium:           #888888;
+@grey-dark:             #353639;
+@grey-darker:           #1f2123;
+@black:                 #000000;
+
+// Social Medis
+@social-facebook:       #3b5999;// Dark Blue
+@social-twitter:        #55acee;// Light Blue
+@social-reddit:         #ff4500;// Orange
+@social-google-plus:    #db4437;// Red
+@social-instagram:      #4090db;// Blue
+@social-pinterest:      #bd081c;// Red
+@social-youtube:        #e52d27;// Red
+@social-linked-in:      #0077B5;// Blue
+@social-flickr:         #128fdc;// Blue
+@social-sms:            #7d7d82;// Medium Grey
+
+// Bootstrap Colour Overrides
+@brand-primary:         #D22630;
+@brand-secondary:       @green-dark;
+@brand-success:         #78e700;
+@brand-warning:         #eae711;
+@brand-danger:          #ef3120;
+@text-color:            @grey-dark;
+
+// Status Button Colours
+@btn-primary-hover-background:   darken(@green-light, 10%);
+@btn-primary-hover-border:       darken(@green-light, 15%);
+@btn-secondary-hover-background: darken(@teal, 10%);
+@btn-secondary-hover-border:     darken(@teal, 15%);
+@btn-success-hover-background:   #6ac805;
+@btn-success-hover-border:       #569f07;
+@btn-warning-hover-background:   #d2cf00;
+@btn-warning-hover-border:       #b9b600;
+@btn-danger-hover-background:    #d52516;
+@btn-danger-hover-border:        #ac1b0f;
+
+//======================================================================//
+//================== <<<<< Bootstrap Overrides >>>>> ===================//
+//======================================================================//
+
+// Typography
+@font-family-base:      @font-primary;
+@font-size-base:        18px;
+@font-size-large:       floor(@font-size-base * 1.5);
+@line-height-large:     1.35;
+@link-color:            @brand-primary;
+@link-hover-color:      darken(@green-light, 15%);
+@link-hover-decoration: none;
+
+// Spacing
+@grid-gutter-width:     @space-xl;
+@gutter:                @grid-gutter-width;
+
+// Button
+@btn-font-weight:       600;
+
+// Navbar
+@navbar-height-xs:      50px;
+@navbar-height:         70px;
+@nav-link-hover-bg:     transparent;
+
+// Content Padding
+// Used for padding the content once the navbar is stickied
+@content-default-padding-top-xs:   30px;
+@content-default-padding-top:      @space*4;
+
+// Header
+@header-height-xs:            @navbar-height-xs + 50px;// 50px is the height of the mobile leaderboard ad
+@header-height:               @navbar-height + 90px;// 90px is the height of the desktop leaderboard ad
+@header-oversized-x01-height: @navbar-height + 200px;// 200px is the height of the desktop oversized leaderboard ad
+
+// Border Radii
+@border-radius-base:    0;
+@border-radius-large:   0;
+@border-radius-small:   0;
+
+// Padding for .form-control and .btn
+@line-height-base:         1.45;
+@padding-base-vertical:    @space-xs;
+@padding-base-horizontal:  @space-md;
+@padding-large-horizontal: @space-lg;
+
+// Input
+@input-color:              @grey-medium;
+@input-border:             @grey-light;
+@btn-border-base:          3px;
+@input-border-large:       3px;
+@input-border-focus:       @green-dark;
+
+// Default .form-control height
+@input-height-base:        (@line-height-computed + (@padding-base-vertical * 2) + (@btn-border-base * 2));
+
+// Large .form-control height
+@input-height-large:       (floor(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + (@input-border-large * 2));
+
+// Additional Screen Sizes
+@screen-xsmd:           360px;// Medium mobile
+@screen-xsmd-min:       @screen-xsmd;
+@screen-xslg:           480px;// Larger mobile
+@screen-xslg-min:       @screen-xslg;
+@screen-xl:             1400px;
+@screen-xl-min:         @screen-xl;
+@screen-xxl:            1600px;
+@screen-xxl-min:        @screen-xxl;
+
+@screen-lg-max:         (@screen-xl - 1);
+@screen-xl-max:         (@screen-xxl - 1);
+
+// Container sizes
+@container-tablet:             768px - @grid-gutter-width;
+@container-desktop:            960px;
+@container-large-desktop:      1080px;
+@container-xl:                 1200px;
+@container-xxl:                1320px;
+
+// Tables
+@table-border-color:    @border-item;
+@table-bg-accent:       tint( @off-white, 25% );
+
+// Modal
+@modal-backdrop-opacity:     0.65;
+
+// Pagination Colours
+@pagination-border:              @border-item;
+@pagination-color:               @grey-dark;
+@pagination-disabled-color:      @pagination-color;
+@pagination-hover-bg:            @off-white;
+@pagination-hover-color:         @brand-primary;
+
+// Menu List Landing
+@menu-list-landing-width:      300px;
+@zindex-list-landing-menu:     1100;
+@zindex-list-landing-overlay:  1090;
+
+// Tooltip
+@tooltip-bg:        @teal;
+
+
+// Custom Corporate Styling
+
+@color_2: #e6e6e6;
+@color_3: #777;
+@color_4: #ccc;
+@color_5: #9d9d9d;
+@color_6: #444;
+@transparent: transparent;
+@background_color_2: #333;
+@background_color_3: @white;
+@background_color_4: #222;
+@background_color_5: #090909;
+@border_color_1: transparent;
+@border_color_2: #ddd;
+@border_color_3: #090909;
+@border_color_4: #333;
+@border_color_5: #101010;
+@color_1: #222;
+@color_2: @white;
+@font_family_1: Flaticon;
+@border_color_1: #2C2A29;
+@bg-off-white: white;
+
+
+
+/* Flaticons */
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/flaticon.eot");
+  src: url("../fonts/flaticon.eot#iefix") format("embedded-opentype"), url("../fonts/flaticon.woff") format("woff"), url("../fonts/flaticon.ttf") format("truetype"), url("../fonts/flaticon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 20px;
+  font-style: normal;
+  margin-left: 20px
+}
+
+.flaticon-25:before {
+  content: "\e000"
+}
+
+.flaticon-7:before {
+  content: "\e001"
+}
+
+.flaticon-agreement2:before {
+  content: "\e002"
+}
+
+.flaticon-arrow158:before {
+  content: "\e003"
+}
+
+.flaticon-arrow483:before {
+  content: "\e004"
+}
+
+.flaticon-arrow487:before {
+  content: "\e005"
+}
+
+.flaticon-arrowhead7:before {
+  content: "\e006"
+}
+
+.flaticon-audio49:before {
+  content: "\e007"
+}
+
+.flaticon-banknotes:before {
+  content: "\e008"
+}
+
+.flaticon-bicycle7:before {
+  content: "\e009"
+}
+
+.flaticon-bookmark9:before {
+  content: "\e00a"
+}
+
+.flaticon-calendar146:before {
+  content: "\e00b"
+}
+
+.flaticon-calendar159:before {
+  content: "\e00c"
+}
+
+.flaticon-check30:before {
+  content: "\e00d"
+}
+
+.flaticon-checkbox6:before {
+  content: "\e00e"
+}
+
+.flaticon-checked21:before {
+  content: "\e00f"
+}
+
+.flaticon-chevron18:before {
+  content: "\e010"
+}
+
+.flaticon-chevron20:before {
+  content: "\e011"
+}
+
+.flaticon-chevron21:before {
+  content: "\e012"
+}
+
+.flaticon-chevron22:before {
+  content: "\e013"
+}
+
+.flaticon-chicago1:before {
+  content: "\e014"
+}
+
+.flaticon-clock96:before {
+  content: "\e015"
+}
+
+.flaticon-concert1:before {
+  content: "\e016"
+}
+
+.flaticon-connection28:before {
+  content: "\e017"
+}
+
+.flaticon-creditcard3:before {
+  content: "\e018"
+}
+
+.flaticon-delete85:before {
+  content: "\e019"
+}
+
+.flaticon-envelope4:before {
+  content: "\e01a"
+}
+
+.flaticon-facebook55:before {
+  content: "\e01b"
+}
+
+.flaticon-flying:before {
+  content: "\e01c"
+}
+
+.flaticon-gear39:before {
+  content: "\e01d"
+}
+
+.flaticon-github5:before {
+  content: "\e01e"
+}
+
+.flaticon-google2:before {
+  content: "\e01f"
+}
+
+.flaticon-info28:before {
+  content: "\e020"
+}
+
+.flaticon-information51:before {
+  content: "\e021"
+}
+
+.flaticon-instagram12:before {
+  content: "\e022"
+}
+
+.flaticon-leftarrow23:before {
+  content: "\e023"
+}
+
+.flaticon-left222:before {
+  content: "\e024"
+}
+
+.flaticon-linkedin12:before {
+  content: "\e025"
+}
+
+.flaticon-logotype3:before {
+  content: "\e026"
+}
+
+.flaticon-losses:before {
+  content: "\e027"
+}
+
+.flaticon-magnifier12:before {
+  content: "\e028"
+}
+
+.flaticon-mail25:before {
+  content: "\e029"
+}
+
+.flaticon-map30:before {
+  content: "\e02a"
+}
+
+.flaticon-multiple25:before {
+  content: "\e02b"
+}
+
+.flaticon-parking15:before {
+  content: "\e02c"
+}
+
+.flaticon-passenger2:before {
+  content: "\e02d"
+}
+
+.flaticon-payment4:before {
+  content: "\e02e"
+}
+
+.flaticon-pin56:before {
+  content: "\e02f"
+}
+
+.flaticon-plus24:before {
+  content: "\e030"
+}
+
+.flaticon-plus79:before {
+  content: "\e031"
+}
+
+.flaticon-printer67:before {
+  content: "\e032"
+}
+
+.flaticon-refresh57:before {
+  content: "\e033"
+}
+
+.flaticon-rss9:before {
+  content: "\e034"
+}
+
+.flaticon-savefile:before {
+  content: "\e035"
+}
+
+.flaticon-search99:before {
+  content: "\e036"
+}
+
+.flaticon-settings48:before {
+  content: "\e037"
+}
+
+.flaticon-shopping11:before {
+  content: "\e038"
+}
+
+.flaticon-silhouette78:before {
+  content: "\e039"
+}
+
+.flaticon-spaceship2:before {
+  content: "\e03a"
+}
+
+.flaticon-speechbubble3:before {
+  content: "\e03b"
+}
+
+.flaticon-star40:before {
+  content: "\e03c"
+}
+
+.flaticon-call5:before {
+  content: "\e03d"
+}
+
+.flaticon-trophy36:before {
+  content: "\e03e"
+}
+
+.flaticon-social19:before {
+  content: "\e03f"
+}
+
+.flaticon-social38:before {
+  content: "\e040"
+}
+
+.flaticon-vehicle12:before {
+  content: "\e041"
+}
+
+.flaticon-youtube4:before {
+  content: "\e042"
+}
+
+.flaticon-world91:before {
+  content: "\e043"
+}
+
+.flaticon-youtube18:before {
+  content: "\e044"
+}
