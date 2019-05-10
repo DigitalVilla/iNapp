@@ -1,5 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import { iColor, iSpace, fade } from '../settings'
+
 const Todo = ({ todo }) => (
   <View style={styles.todoContainer}>
     <Text style={styles.todoText}>
@@ -9,8 +11,7 @@ const Todo = ({ todo }) => (
 )
 const styles = StyleSheet.create({
   todoContainer: {
-    marginLeft: 20,
-    marginRight: 20,
+    marginHorizontal: iSpace.LG,
     backgroundColor: '#ffffff',
     borderTopWidth: 1,
     borderRightWidth: 1,
@@ -27,7 +28,8 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   todoText: {
-    fontSize: 17
+    fontSize: 17,
+    color: '#444444'
   }
 })
 export default Todo

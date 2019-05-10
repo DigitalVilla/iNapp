@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { View, ScrollView, StyleSheet } from 'react-native'
 import Heading from './src/components/Heading'
-import Input from './src/components/Input'
-import Button from './src/components/Button'
-import Todo from './src/components/Todo'
+import InputBar from './src/components/InputBar'
+
+import TodoList from './src/components/TodoList'
 import { iColor, iSpace } from './src/settings'
 
 
@@ -17,12 +17,28 @@ class App extends Component {
       todos: [],
       type: 'All'
     }
-     this.submitTodo = this.submitTodo.bind(this)
+    //  this.submitTodo = this.submitTodo.bind(this)
   }
 
   inputChange(inputValue) {
     // console.log(' Input Value: ', inputValue)
     this.setState({ inputValue })
+  }
+
+  deleteTodo(todoIndex) {
+    let { todos } = this.state
+    todos = todos.filter((todo) => todo.todoIndex !== todoIndex)
+    this.setState({ todos })
+  }
+
+  toggleComplete(todoIndex) {
+    let todos = this.state.todos
+    todos.forEach((todo) => {
+      if (todo.todoIndex === todoIndex) {
+        todo.complete = !todo.complete
+      }
+    })
+    this.setState({ todos })
   }
 
   submitTodo() {
@@ -50,12 +66,10 @@ class App extends Component {
         <ScrollView keyboardShouldPersistTaps='always'
           style={styles.content}>
           <Heading />
-          <Input inputValue={inputValue}
-            inputChange={(text) => this.inputChange(text)} />
-            <Button submitTodo={this.submitTodo} />
-            {/* {
-              this.state.map ()
-            } */}
+          <InputBar inputValue={inputValue}
+            inputChange={(text) => this.inputChange(text)}
+            submitTodo={() => this.submitTodo()} />
+          <TodoList todos={this.state.todos} />
         </ScrollView>
       </View>
     )
