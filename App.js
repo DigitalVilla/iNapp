@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { View, ScrollView, StyleSheet } from 'react-native'
 import Heading from './src/components/Heading'
 import InputBar from './src/components/InputBar'
-
 import TodoList from './src/components/TodoList'
 import { iColor, iSpace } from './src/settings'
 
@@ -17,7 +16,8 @@ class App extends Component {
       todos: [],
       type: 'All'
     }
-    //  this.submitTodo = this.submitTodo.bind(this)
+     this.deleteTodo = this.deleteTodo.bind(this)
+     this.toggleComplete = this.toggleComplete.bind(this)
   }
 
   inputChange(inputValue) {
@@ -69,7 +69,9 @@ class App extends Component {
           <InputBar inputValue={inputValue}
             inputChange={(text) => this.inputChange(text)}
             submitTodo={() => this.submitTodo()} />
-          <TodoList todos={this.state.todos} />
+          <TodoList todos={this.state.todos}
+            toggleComplete={this.toggleComplete}
+            deleteTodo={this.deleteTodo} />
         </ScrollView>
       </View>
     )

@@ -85,7 +85,3 @@ export const iColor = {
   socialflickr: '#128fdc', // Blue
   socialsms: '#7d7d82', // Medium Grey
 }
-
-export function fade (color, percent) {
-  return  color+
-}
